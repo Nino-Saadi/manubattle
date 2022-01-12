@@ -1,4 +1,5 @@
 <?php
+
 function db_connect()
 {
     $pdo = new \PDO('mysql:dbname=manubattle;host=localhost;charset=utf8', 'root', '', [

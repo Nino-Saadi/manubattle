@@ -1,5 +1,20 @@
 <?php
 
+
+function render($partial_path, $params = array())
+{
+    // Crée des variables à partir d'un tableau associatif : les clés déviennent les variables et les valeurs les contenus
+    extract($params);
+    // on capture le contenu du template index et on l'envoie dans la variable $content
+    ob_start();
+
+    require 'templates/' . $partial_path . '.php';
+
+    $content = ob_get_clean();
+
+    require 'templates/default.php';
+}
+
 function checkId($param)
 {
     // on vérifie l'existance d'un paramètre id, non null, de type numérique
@@ -9,4 +24,17 @@ function checkId($param)
     }
 
     return null;
+}
+
+
+function init_session() : bool
+{
+  if(!session_id())
+  {
+    session_start();
+    session_regenerate_id();
+    return true;
+  }
+
+  return false;
 }
