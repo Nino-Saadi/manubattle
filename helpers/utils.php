@@ -38,3 +38,20 @@ function init_session() : bool
 
   return false;
 }
+
+function disconnect()
+{
+  session_start();
+  session_destroy();
+  header("Location:");
+}
+
+
+function is_logged():bool
+{
+  return true;
+}
+
+function pretty_print_r($var) {
+    echo '<pre>'.print_r($var, true).'</pre>';
+  }
