@@ -72,13 +72,14 @@ CREATE TABLE `utilisateurs` (
   `user_total_game` int(11) DEFAULT NULL,
   `user_total_win` int(11) DEFAULT NULL,
   `user_level` int(11) DEFAULT NULL,
+  `user_race` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_grade` int(11) NOT NULL,
   PRIMARY KEY (`id_user`),
   KEY `id_grade` (`id_grade`),
   CONSTRAINT `utilisateurs_ibfk_1` FOREIGN KEY (`id_grade`) REFERENCES `grade` (`id_grade`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `utilisateurs` (`id_user`, `user_name`, `user_password`, `user_score`, `user_total_game`, `user_total_win`, `user_level`, `id_grade`) VALUES (1, '$2y$10$RnzeUqJRYdPYon6pSJ3THeX3fb7AL6oGP4NN6Bb2eUQV.xgq7pTG.', 'jynl', 1, 80, 527, 7, 1);
+INSERT INTO `utilisateurs` (`id_user`, `user_name`, `user_password`, `user_score`, `user_total_game`, `user_total_win`, `user_level`, `user_race`,`id_grade`) VALUES (1, 'skamposama', '$2y$10$RnzeUqJRYdPYon6pSJ3THeX3fb7AL6oGP4NN6Bb2eUQV.xgq7pTG.', 1, 80, 527, 7, 'elfe',1);
 -- INSERT INTO `utilisateur` (`id_user`, `user_name`, `user_password`, `user_score`, `user_total_game`, `user_total_win`, `user_level`, `id_grade`) VALUES (2, 'madie.thompson', 'dljo', 4, 436, 814, 4, 2);
 -- INSERT INTO `utilisateur` (`id_user`, `user_name`, `user_password`, `user_score`, `user_total_game`, `user_total_win`, `user_level`, `id_grade`) VALUES (3, 'fcummings', 'guoc', 7, 136, 549, 4, 3);
 -- INSERT INTO `utilisateur` (`id_user`, `user_name`, `user_password`, `user_score`, `user_total_game`, `user_total_win`, `user_level`, `id_grade`) VALUES (4, 'colton59', 'pwtf', 1, 849, 891, 4, 4);

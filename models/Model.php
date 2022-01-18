@@ -1,27 +1,29 @@
 <?php
 namespace App\Models;
 use \PDO;
+use \Database;
 abstract class Model
 {
     protected $db;
 
     protected $table;
 
-    public function __construct()
-    {
-       $this->db = db_connect();
-    }
-
     public function hydrate(array $data)
     {
-        foreach ($data as $key => $val) {
-            $method = 'set' . ucfirst($key);
+      foreach ($data as $key => $val) {
+        $method = 'set' . ucfirst($key);
 
-            if (method_exists($this, $method)) {
-                $this->$method($val);
-            }
+        if (method_exists($this, $method)) {
+          $this->$method($val);
         }
+      }
     }
+    
+    public function __construct()
+    {
+       $this->db = Database::getInstance();
+    }
+
     // Generic getter
     public function __get($property)
     {
@@ -30,9 +32,17 @@ abstract class Model
         }
     }
 
-    
 
-    function delete()
+    // Setter Universel
+    public function __set($property, $value) {
+      if (property_exists($this, $property)) {
+        $this->$property = $value;
+      }
+    }
+
+
+
+    public function delete()
     {
         // on utilise la méthode prepare car notre requête a pas besoin d'un paramètre envoyé par l'utilisateur.
 
@@ -40,8 +50,9 @@ abstract class Model
 
         // on exécute la requête en précisant la valeur du paramètre
 
-        return $stmt->execute([$this->id]);
+        return $stmt->execute([$this->id_user]);
     }
+
 
     public function getOne()
     {

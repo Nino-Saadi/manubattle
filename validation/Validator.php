@@ -46,7 +46,7 @@ class Validator {
 
   private function min(string $name, string $value, string $rule)
   {
-    // recher dans un certain pattern de caractère(dans ce cas là les caractères numériques)
+    // recherche dans un certain pattern de caractère(dans ce cas là les caractères numériques)
     preg_match_all('/(\d+)/', $rule, $matches);
 
     $limit = (int) $matches[0][0];

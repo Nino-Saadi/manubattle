@@ -21,7 +21,7 @@ if(isset($_POST['valide_connection']))
      $stmt->execute([$username]);
      $req = $stmt->fetch();
 
-     // pretty_print_r($req);
+     pretty_print_r($req);
      // pretty_print_r(password_verify($password, $req['user_password']);
 
      if($req)
@@ -33,8 +33,9 @@ if(isset($_POST['valide_connection']))
           // init_session();
 
           // $_SESSION['user_name'] = $username;
+        }else {
+          echo 'Identifiant ou mot de passe incorect';
         }
-        echo 'Identifiant ou mot de passe incorect';
       }
  }
  ?>
