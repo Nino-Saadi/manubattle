@@ -13,7 +13,7 @@
  
  - Visualiser le **Classement** actuel 
  
- - Système de valeur avec obtention de Grades à certains palier de niveaux 
+ - Système de valeur avec obtention de **Grades** à certains palier de niveaux 
  
  
  ## Language utilisés 
