@@ -1,7 +1,7 @@
 # La Manu Ring 
  
  La Manu Ring est un projet qui revisite l'un des jeux les plus pratiqué sur terre : le **"Pierre, Feuille, Ciseaux"** , customisé selon l'univers  des romans et des films 
- " Le Seigneur des Anneaux" ! 
+ " **Le Seigneur des Anneaux**" ! 
  
  ## Fonctionnalité
  
@@ -37,7 +37,7 @@ Le projet est fonctionnel mais toujours en constante volonté d'évolution et d'
 
 - Variation des races 
 
-- Amélioration du SCSS avec plus de variables er de conditions 
+- Amélioration du SCSS avec plus de variables et de conditions 
 
 - Amélioration du PHP
 
