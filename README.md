@@ -19,8 +19,7 @@
  ## Language utilisés 
  
  HTML3/CSS5, PHP, MYSQL, SASS
- 
-## Screenshots
+
 
 ## Licences 
 
@@ -37,6 +36,10 @@ Le projet est fonctionnel mais toujours en constante volonté d'évolution et d'
 - Création d'un cercle/clan
 
 - Variation des races 
+
+- Amélioration du SCSS avec plus de variables er de conditions 
+
+- Amélioration du PHP
 
 
  
