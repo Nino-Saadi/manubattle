@@ -18,7 +18,7 @@
  
  ## Language utilisés 
  
- 
+ HTML3/CSS5, PHP, MYSQL, SASS
 
 
 ## Licences 
