@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="120" viewBox="0 0 122 120">
+  <g id="Groupe_116" data-name="Groupe 116" transform="translate(-1566 -176)">
+    <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(1599 176)" fill="#fa0" stroke="#707070" stroke-width="1">
+      <circle cx="24.5" cy="24.5" r="24.5" stroke="none"/>
+      <circle cx="24.5" cy="24.5" r="24" fill="none"/>
+    </g>
+    <g id="Ellipse_33" data-name="Ellipse 33" transform="translate(1639 247)" fill="#707070" stroke="#707070" stroke-width="1">
+      <circle cx="24.5" cy="24.5" r="24.5" stroke="none"/>
+      <circle cx="24.5" cy="24.5" r="24" fill="none"/>
+    </g>
+    <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(1566 247)" fill="#740" stroke="#707070" stroke-width="1">
+      <circle cx="24.5" cy="24.5" r="24.5" stroke="none"/>
+      <circle cx="24.5" cy="24.5" r="24" fill="none"/>
+    </g>
+    <line id="Ligne_11" data-name="Ligne 11" x2="15" y2="33" transform="translate(1643.5 214)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_12" data-name="Ligne 12" x1="17" y2="29.234" transform="translate(1590.5 218.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_13" data-name="Ligne 13" x1="24" transform="translate(1615.5 271.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_14" data-name="Ligne 14" x1="7" y2="11" transform="translate(1615.5 260.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_15" data-name="Ligne 15" x1="8" y1="10" transform="translate(1615.5 271.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_16" data-name="Ligne 16" x1="7" y2="11" transform="matrix(-0.259, -0.966, 0.966, -0.259, 1647.893, 250.581)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_17" data-name="Ligne 17" x1="8" y1="10" transform="matrix(-0.259, -0.966, 0.966, -0.259, 1658.518, 247.734)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_18" data-name="Ligne 18" x1="7" y2="11" transform="translate(1616.593 223.953) rotate(120)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Ligne_19" data-name="Ligne 19" x1="8" y1="10" transform="translate(1607.067 218.453) rotate(120)" fill="none" stroke="#707070" stroke-width="1"/>
+  </g>
+</svg>

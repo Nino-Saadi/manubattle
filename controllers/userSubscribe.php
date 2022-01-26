@@ -41,4 +41,8 @@ class userSubscribe extends Controller {
     render('subscribe', compact('title'));
     echo "cacauète";
   }
+
+  private function signupUser(){
+    if ($this->emptyInput() == false)
+  }
 }

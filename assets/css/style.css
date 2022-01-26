@@ -1,0 +1,385 @@
+
+
+/*************  Général  *************/
+@font-face {
+  font-family: RingFont; /*variables*/
+  src: url(../font/Ring.TTF);
+}
+
+a:link{
+  text-decoration: none;
+}
+
+h1{
+font-family: RingFont;
+}
+
+body{
+  margin : 0;
+  width : 100%;
+  height: auto;
+  background-image: url(../img/background1.png);
+  background-size: cover;
+  background-attachment: fixed;;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+
+
+
+/*************  Navigation *************/
+
+header{
+  padding-bottom: 150px;
+}
+
+.nav-home{
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.33); /*variables*/
+  padding: 10px 0;
+}
+
+.nav-container{
+text-decoration: none;
+flex-direction : row;
+justify-content: space-between;
+}
+
+.nav-container a{
+  text-decoration: none;
+  color: #fff;
+  border: #FFAA00;
+  font-family: RingFont;
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+.nav-container a:hover{
+  color: #FFAA00; /*variables*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/************* Modal de Bienvenue *************/
+
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-container{
+  width : 900px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.33); /*variables*/
+}
+
+.main-container h1{
+  font-family: RingFont;
+  color: #fff;
+  font-size: 45px;
+}
+
+.main-container p{
+  margin-bottom:50px;
+  color: #fff;
+  border-color: #00000;
+  font-size:20px;
+}
+
+
+
+
+
+
+
+/************* Button du home *************/
+
+
+.btn-container{
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container button{
+   width : 250px;
+   border-radius: 30px;
+   background-color: #9A8961;
+   border-color: none;
+}
+
+.btn-container a{
+  font-size: 20px;
+  font-family: RingFont;
+  color: #fff;
+}
+
+.btn-container a:hover{
+  color: #FFAA00;
+}
+
+
+
+
+
+
+
+
+
+/************* Modal login/signup *************/
+
+  .login-container{
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.33); /*variables*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height:350px;
+  }
+
+  .login-container .form-group{
+    /* margin-top: 10px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form-group label{
+    margin-bottom: 10px;
+  }
+
+  .btn-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+
+
+
+
+  /************* Selection Races *************/
+
+   .form-race{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+   }
+
+  .race-container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+  }
+
+    .race{
+    margin : 60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border-color: #707070;
+  }
+
+  input[type="radio"]{
+    /* display: none; */
+  }
+
+  input[type="radio"]:checked + label{
+    color: #00000;
+  }
+
+
+  .race.race-hobbit:hover{
+    background: #60CF4A;
+    color: #60CF4A;
+    border-color: #00000;
+  }
+
+  input[type="radio"]:checked{
+
+  }
+
+  .race.race-elfe:hover{
+    background: #FFAA00;
+    color: #FFAA00;
+  }
+
+
+  .race.race-human:hover{
+    color: #606154;
+    background: #606154;
+  }
+
+
+  .race.race-nain:hover{
+    background: #BB6600;
+    color: #BB6600;
+    text-shadow: 2px 2px #00000;
+  }
+
+
+  .race h2{
+    margin-left: 20px;
+    font-family: RingFont;
+  }
+
+  .race-button{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .race-button button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width :200px;
+    font-size: 30px;
+    border-radius: 30px;
+  }
+
+
+
+
+
+
+
+  /************* Welcome *************/
+
+
+  .gandal-container img{
+
+  }
+
+
+  .welcome-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .gandalf-container{
+    margin-top: 200px;
+  }
+
+  .speech-container{
+    width: 200px;
+    background-image: url(../img/gandalf-speech.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top : 80px;
+    margin-right: 20px;
+  }
+
+  .speech-elements{
+    background-color: purple;
+  }
+
+
+  /* Sidebar pc */
+
+    .has-back{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bord{
+       display: flex;
+       justify-content: center;
+    }
+
+
+   .side-container{
+    width : 350px;
+    height: 100%;
+    background-color: rgba(228, 228, 228, 0.44); /*variables*/
+    position: fixed;
+  }
+
+  .list-group a{
+    font-size: 30px;
+    font-family: RingFont;
+    color: #000000;
+  }
+
+  .list-group-item{
+    height: 60px;
+    color:#00000;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+  }
+
+  .list-group-item:hover{
+     color :#FFAA00;
+  }
+
+  .list-group-item i:after{
+     margin-left: 10px;
+  }
+
+  .side-profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* color: #FFAA00; */
+  }
+
+  .side-head h2{
+    font-family: RingFont;
+    font-size: 30px;
+    color: #FFAA00;
+  }
+
+  .side-head img{
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 100px;
+    background-color: #FFAA00;
+  }
+
+
+  .side-grade{
+   font-family: RingFont;
+   border-radius: 30px;
+   background-color: blue;
+   padding: 5px;
+  }
+
+  .side-quote{
+    font-size: 10px;
+    font-family: RingFont;
+    font-weight: bold;
+  }
+
+  .

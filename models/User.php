@@ -2,13 +2,13 @@
 
 namespace App\models;
 
-require_once 'Model.php';
+// require_once 'Model.php';
 require_once '../helpers/utils.php';
 
 
-class User extends Model{
+class User {
 
-  private $id_user;
+  private $userId;
   private $username;
   private $password;
   private $score;
@@ -18,6 +18,18 @@ class User extends Model{
   private $race;
 
   protected $table = 'utilisateurs';
+
+  public function __construct($userId, $username, $password, $score, $totalGame, $totalWin, $level, $race){
+    $this->userId = $userId;
+    $this->userName = $userName;
+    $this->password = $password;
+    $this->score = $score;
+    $this->totalGame = $totalGame;
+    $this->totalWin = $totalWin;
+    $this->level = $level;
+    $this->race = $race;
+  }
+
 
   public function userDetails()
   {
@@ -67,21 +79,26 @@ class User extends Model{
 
 
 
-public function checkUserName(){
+public function checkUserName($username){
 
-  $stmt = Database::getInstance()->prepare('SELECT * FROM `utilisateurs` WHERE `user_name` = ?');
+  $stmt = Database::getInstance()->prepare('SELECT `user_name` FROM `utilisateurs` WHERE `user_name` = ?');
 
-  $stmt->execute([$username]);
+  if (!$stmt->execute([$username])) {
+    $stmt = null;
+    echo "le nom d'utilisateur existe déjà";
+    exit();
+  }
 
-  $user = $stmt->fetch();
+  $resultCheck;
+  if($stmt->rowCount() > 0){
+    $resultCheck = false;
+  }
+  else {
+    $resultCheck = true;
+  }
 
-  return $user;
+  return $resultCheck;
 
-  // if ($user){
-  //   echo "le nom d'utilisateur est déjà utilisé";
-  // } else {
-  //   echo "Ok";
-  // }
 }
 
 
