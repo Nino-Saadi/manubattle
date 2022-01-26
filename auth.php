@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   extract($_POST);
   pretty_print_r($_POST);
 }
-init_session();
 ?>
 <body>
     <header class="header"></header>
@@ -31,6 +30,17 @@ init_session();
               </form>
                 <a href="../templates/subscribe.php"><button type="submit" name="Reditrect-Inscription">S'inscrire</button></a>
         </div>
+<div class="conect">
+  <?php  if(isset($_SESSION["userid"])){
+  ?>
+  <h1>Bienvenue <?= $_SESSION["username"]?></h1>
+  <a href="templates/logout.php">LOGOUT</a>
+  <?php }
+  else {
+  ?>
+  <h1>En attente de la connexion</h1>
+<?php } ?>
+</div>
       </main>
 
 

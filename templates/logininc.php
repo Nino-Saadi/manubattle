@@ -17,5 +17,5 @@ if(isset($_POST["valid_login"]))
     $login->loginUser();
 
     // Send back to the front page
-    header("location: ../sidebar.php?error=none");
+    header("location: ../auth.php?error=none");
 }
