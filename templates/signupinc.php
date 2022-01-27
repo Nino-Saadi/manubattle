@@ -1,5 +1,5 @@
 <?php
-require_once "../database/database.php";
+require_once "../database/Database.php";
 require "../models/SignUp.php";
 require_once "../controllers/SignUpContr.php";
 

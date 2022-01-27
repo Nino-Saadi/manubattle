@@ -3,9 +3,18 @@ include "default_back.php";
 ?>
 <main class="box-battle">
   <h1>COMBATTRE</h1>
-  <button>Pierre</button>
-  <button>Feuille</button>
-  <button>Ciseaux</button>
+  <div class="weapon-box">
+    <div class="weapon weapon-rock">
+      <i class="fas fa-hand-rock"><p>Pierre</p></i>
+    </div>
+    <div class="weapon weapon-paper">
+      <i class="fas fa-hand-paper"><p>Feuilles</p></i>
+    </div>
+    <div class="weapon weapon-chisel">
+      <i class="fas fa-hand-scissors"><p>Ciseaux</p></i>
+    </div>
+
+  </div>
   <div class="resultat"></div>
 </main>
 

@@ -382,4 +382,14 @@ main{
     font-weight: bold;
   }
 
-  .
+
+
+  /* ----------- DUEL--------------- */
+
+  .weapon-box{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .weapon

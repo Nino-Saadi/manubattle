@@ -7,7 +7,7 @@ class Login extends Dbh{
   protected function getUser($username, $password) {
     // récupération du mp correspondant aux user_name
       $stmt = $this->connect()->prepare('SELECT `user_password` FROM `utilisateurs`  WHERE `user_name` = ?;');
-
+      $stmt->execute([$username]);
       if(!$stmt->execute([$username]))
       {
           $stmt = null;
@@ -24,7 +24,8 @@ class Login extends Dbh{
 
 
       $pwdHashed = $stmt->fetchAll(PDO::FETCH_ASSOC); // requête stocker dans une variable
-      $checkPwd = password_verify($password, $pwdHashed[0]["user_password"]); // Vérification de la correspondance entre le password et le password hacher contenu dans la BDD
+      $pwdHashed = $pwdHashed[0]["user_password"];
+      $checkPwd = password_verify($password, $pwdHashed); // Vérification de la correspondance entre le password et le password hacher contenu dans la BDD
 
       if($checkPwd == false) {
           $stmt = null;
@@ -33,27 +34,34 @@ class Login extends Dbh{
       }
       elseif($checkPwd == true) {
           $stmt = $this->connect()->prepare('SELECT * FROM `utilisateurs` WHERE `user_name` = ? AND `user_password` = ?;');
-
-          if(!$stmt->execute([$username, $password])) {
+          $stmt->execute(array($username, $pwdHashed));
+          if(!$stmt->execute([$username, $pwdHashed])) {
               $stmt = null;
               header("location: ../auth.php?error=stmtFailed");
               exit();
           }
 
-          if($stmt->rowCount() == 0) {
-              $stmt = null;
-              pretty_print_r($stmt);
-              header("location: ../auth.php?error=userNotFound");
-              exit();
-          }
+          // if($stmt->rowCount() == 0) {
+          //     $stmt = null;
+          //     header("location: ../auth.php?error=userNotFound");
+          //     exit();
+          // }
 
           $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+          $user = $user[0];
 
           session_start();
-          $_SESSION["userid"] = $user[0]["id_user"];
-          $_SESSION["username"] = $user[0]["user_name"];
+          $_SESSION["userid"] = $user["id_user"];
+          $_SESSION["username"] = $user["user_name"];
+          $_SESSION["race"] = $user["user_race"];
+          $_SESSION["win"] = $user["user_total_win"];
+          $_SESSION["game"] = $user["user_total_game"];
+          $_SESSION["score"] = $user["user_score"];
+          $_SESSION["level"] = $user["user_level"];
 
           $stmt = null;
+
       }
   }
+
 }

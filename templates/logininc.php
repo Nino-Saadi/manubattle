@@ -1,8 +1,8 @@
 <?php
 
-require_once "../database/Database.php";
-require "../models/Login.php";
-require_once "../controllers/LoginContr.php";
+// require_once "../database/Database.php";
+// require "../models/Login.php";
+// require_once "../controllers/LoginContr.php";
 
 if(isset($_POST["valid_login"]))
 {
@@ -12,10 +12,13 @@ if(isset($_POST["valid_login"]))
     $password = $_POST["form_password"];
 
     // Instantiating SignupContr
+    include "../database/Database.php";
+    include "../models/Login.php";
+    include "../controllers/LoginContr.php";
     $login = new LoginContr($username, $password);
     // Running error handlers and user signup
     $login->loginUser();
 
     // Send back to the front page
-    header("location: ../auth.php?error=none");
+    header("location: ../profil.php");
 }

@@ -28,5 +28,10 @@ class LoginContr extends Login{
         return $result;
     }
 
+    public function getInfo(){
+      return $this->username. " ".$this->password;
+    }
+
+
 
 }

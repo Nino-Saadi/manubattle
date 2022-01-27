@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <?php include "sidebar.php" ?>
+   <?php include "sidebar.php"?> 
   <main>
     <header class="has-back">
       <h1>La Manu Ring</h1>
-      <a href="home.php">Se déconnecter</a>
+      <a href="templates/logout.php">Se déconnecter</a>
     </header>
   <!-- <footer class="footer">
       <p>&copy; <?= date('Y') ?></p>

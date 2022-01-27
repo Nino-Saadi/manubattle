@@ -1,7 +1,6 @@
 
 -- Création de la DBB
 
-DROP DATABASE IF NOT EXISTS `manu_battle`;
 CREATE DATABASE IF NOT EXISTS `manu_battle` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `manu_battle`;
 

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <body>
 
 <!-- <div class="bord">
@@ -15,7 +16,7 @@
       <div class="side-profil">
         <div class="side-head">
           <img src="assets/img/elf-avatar.svg" width="150px" height="150px" alt="elfe-avatar">
-          <h2>Skamposama</h2>
+          <h2><?= $_SESSION["username"] ?></h2>
         </div>
 
       <div class="side-grade">
@@ -40,13 +41,6 @@
           </li>
         </a>
 
-        <a href="performance.php">
-          <li class="list-group-item">
-            <i class="fas fa-tachometer-alt"></i>
-            Performance
-          </li>
-        </a>
-
         <a href="classement.php">
           <li class="list-group-item">
             <i class="fas fa-trophy"></i>
@@ -54,7 +48,7 @@
           </li>
         </a>
 
-        <a href="incomes.php">
+        <a href="invites.php">
           <li class="list-group-item">
             <i class="fas fa-envelope"></i>
             Invitations

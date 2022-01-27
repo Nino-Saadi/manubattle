@@ -1,4 +1,7 @@
-<?php include "default_front.php" ?>
+<?php
+include "default_front.php"
+
+?>
 <body>
     <!-- Formulaire du choix des races -->
 
@@ -14,7 +17,7 @@
 
         <div class="race race-hobbit">
           <input type="radio" name="race" id="hobbit" value="hobbit">
-          <label for="hobbit"> <img src="assets/img/hobbit-avatar.svg" alt="hobbit-avatar"><h2>Hobbit</h2></label>
+          <label for="hobbit"><img src="assets/img/hobbit-avatar.svg" alt="hobbit-avatar"><h2>Hobbit</h2></label>
         </div>
 
       </div>
