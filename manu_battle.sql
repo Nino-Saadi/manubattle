@@ -4,10 +4,6 @@
 CREATE DATABASE IF NOT EXISTS `manu_battle` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `manu_battle`;
 
-DROP TABLE IF EXISTS `games`;
-DROP TABLE IF EXISTS `utilisateurs`;
-DROP TABLE IF EXISTS `FriendsWith`;
-DROP TABLE IF EXISTS `grade`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +14,6 @@ SET time_zone = "+00:00";
 # TABLE STRUCTURE FOR: grade
 #
 
-DROP TABLE IF EXISTS `grade`;
 
 CREATE TABLE `grade` (
   `id_grade` int(11) NOT NULL AUTO_INCREMENT,
@@ -38,7 +33,6 @@ INSERT INTO `grade` (`id_grade`, `grd_name`) VALUES (5, 'id');
 # TABLE STRUCTURE FOR: FriendsWith
 #
 
-DROP TABLE IF EXISTS `FriendsWith`;
 
 CREATE TABLE `FriendsWith` (
   `id_user` int(11) NOT NULL,
@@ -61,7 +55,6 @@ INSERT INTO `FriendsWith` (`id_user`, `id_user_1`) VALUES (5, 1);
 # TABLE STRUCTURE FOR: utilisateurs
 #
 
-DROP TABLE IF EXISTS `utilisateurs`;
 
 CREATE TABLE `utilisateurs` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
@@ -90,7 +83,6 @@ INSERT INTO `utilisateurs` (`id_user`, `user_name`, `user_password`, `user_score
 # TABLE STRUCTURE FOR: games
 #
 
-DROP TABLE IF EXISTS `games`;
 
 CREATE TABLE `games` (
   `id_games` int(11) NOT NULL AUTO_INCREMENT,

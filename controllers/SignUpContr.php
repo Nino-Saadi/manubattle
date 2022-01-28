@@ -1,5 +1,4 @@
 <?php
-
 require_once '../database/Database.php';
 require_once '../models/SignUp.php';
 require_once '../helpers/utils.php';

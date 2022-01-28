@@ -9,7 +9,7 @@ session_start();
 // }
 ?>
 <body>
-    <header class="header"></header>
+    <header class="header-front"></header>
     <main>
 
         <div class="login-container">
@@ -36,9 +36,4 @@ session_start();
       </main>
 
 
-    <footer class="footer">
-
-    </footer>
-</body>
-
-</html>
+<?php include "footer.php"  ?>

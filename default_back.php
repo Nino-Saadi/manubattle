@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,13 +12,9 @@
 </head>
 
 <body>
-   <?php include "sidebar.php"?> 
+   <?php include "sidebar.php"?>
   <main>
     <header class="has-back">
       <h1>La Manu Ring</h1>
       <a href="templates/logout.php">Se déconnecter</a>
     </header>
-  <!-- <footer class="footer">
-      <p>&copy; <?= date('Y') ?></p>
-      <div>Slected Picture <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-  </footer> -->

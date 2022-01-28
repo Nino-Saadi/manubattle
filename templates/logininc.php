@@ -18,7 +18,7 @@ if(isset($_POST["valid_login"]))
     $login = new LoginContr($username, $password);
     // Running error handlers and user signup
     $login->loginUser();
-
+    $login->listUser();
     // Send back to the front page
     header("location: ../profil.php");
 }

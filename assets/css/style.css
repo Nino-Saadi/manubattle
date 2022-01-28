@@ -33,8 +33,8 @@ body{
 
 /*************  Navigation *************/
 
-header{
-  padding-bottom: 150px;
+.header-front{
+    padding-bottom: 150px;
 }
 
 .nav-home{
@@ -148,7 +148,7 @@ main{
 
   .login-container{
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.33); /*variables*/
+    background-color: rgba(0, 0, 0, 0.33);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -157,17 +157,25 @@ main{
   }
 
   .login-container .form-group{
-    /* margin-top: 10px; */
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
   .form-group label{
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .btn-group{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-race{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +297,7 @@ main{
   }
 
   .speech-container{
-    width: 200px;
+    width: 400px;
     background-image: url(../img/gandalf-speech.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -302,7 +310,8 @@ main{
   }
 
   .speech-elements{
-    background-color: purple;
+    width:300px;
+    /* background-color: purple; */
   }
 
 
@@ -383,13 +392,59 @@ main{
   }
 
 
+/*--------------Profil-------------- */
+
+
+.profil-container{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+.profil-info{
+  margin-top: 100px;
+  /* display: flex;
+  justify-content: center; */
+  background-color: rgba(228, 228, 228, 0.44);
+  border-radius: 20px;
+  font-family: RingFont;
+}
+
+/* .profil-avatar{
+    /* border-radius: 100px;
+    background-color: #FFAA00; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* ----------- DUEL--------------- */
 
   .weapon-box{
+    margin-top: 50px;
     display:flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(228, 228, 228, 0.44); /*variables*/
   }
 
-  .weapon
+
+  .resultat{
+    margin-top:20px;
+    width: 300px;
+    background-color:rgba(228, 228, 228, 0.44); /*variables*/
+  }

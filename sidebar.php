@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <body>
 
 <!-- <div class="bord">
@@ -15,12 +14,12 @@
 
       <div class="side-profil">
         <div class="side-head">
-          <img src="assets/img/elf-avatar.svg" width="150px" height="150px" alt="elfe-avatar">
-          <h2><?= $_SESSION["username"] ?></h2>
+          <a href="profil.php"><img src="assets/img/<?= $_SESSION["race"] ?>-avatar.svg" width="150px" height="150px" alt="elfe-avatar"></a>
+          <a href="profil.php"><h2><?= $_SESSION["username"] ?></h2></a>
         </div>
 
       <div class="side-grade">
-        <p>Elfe Vanyar - Niveau 10</p>
+        <p>Elfe Vanyar - Niveau: <?= $_SESSION["level"] ?></p>
       </div>
 
       <div class="side-quote">

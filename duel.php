@@ -1,22 +1,24 @@
 <?php
 include "default_back.php";
 ?>
-<main class="box-battle">
+<div class="box-battle">
   <h1>COMBATTRE</h1>
   <div class="weapon-box">
     <div class="weapon weapon-rock">
-      <i class="fas fa-hand-rock"><p>Pierre</p></i>
+      <i class="fas fa-hand-rock fa-3x"><button>Pierre</button></i>
     </div>
     <div class="weapon weapon-paper">
-      <i class="fas fa-hand-paper"><p>Feuilles</p></i>
+      <i class="fas fa-hand-paper fa-3x"><button>Feuilles</button></i>
     </div>
     <div class="weapon weapon-chisel">
-      <i class="fas fa-hand-scissors"><p>Ciseaux</p></i>
+      <i class="fas fa-hand-scissors fa-3x"><button>Ciseaux</button></i>
     </div>
 
   </div>
   <div class="resultat"></div>
-</main>
+</div>
+
+<?php include "footer.php"  ?>
 
 <script>
 const buttons = document.querySelectorAll("button");

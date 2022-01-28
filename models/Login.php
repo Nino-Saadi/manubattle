@@ -64,4 +64,13 @@ class Login extends Dbh{
       }
   }
 
+  public function userList(){
+    $stmt = $this->connect()->query('SELECT `user_name` AND `user_score` FROM `utilisateurs` ORDER BY `user_score`;');
+
+    $user_list = $stmt->fetchAll;
+    return $user_list;
+  }
+
+
+
 }

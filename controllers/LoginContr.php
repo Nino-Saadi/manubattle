@@ -1,5 +1,4 @@
 <?php
-
 class LoginContr extends Login{
 
     private $username;
@@ -17,6 +16,7 @@ class LoginContr extends Login{
             exit();
         }
         $this->getUser($this->username, $this->password);
+        $this->ListUser();
     }
 
     private function emptyInput() {
@@ -32,6 +32,9 @@ class LoginContr extends Login{
       return $this->username. " ".$this->password;
     }
 
+     public function listUser(){
+       $this->userList();
+     }
 
 
 }

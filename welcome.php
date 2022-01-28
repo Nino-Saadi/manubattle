@@ -11,9 +11,16 @@ include "default_front.php";
 
     <div class="speech-container">
       <div class="speech-elements">
-
+        <p>Bienvenue à a toi jeune aventurier</p>
+        <p>Je te remercie d'avoir accepter cette invitation dans cette future épopée.</p>
+        <p>Tu nous seras un élément essentiel lors de la bataille finale.</p>
+        <p>Je te souhaite Bon courage !</p>
       </div>
     </div>
 
+    <div class="btn-redirect-bataille">
+      <a href="auth.php">Retour à la connexion</a>
+    </div>
   </div>
-</body>
+
+<?php include "footer.php" ?>

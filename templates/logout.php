@@ -5,4 +5,4 @@ session_unset();
 session_destroy();
 
 // Send back to the front page
-header("location: ../auth.php?error=none");
+header("location: ../auth.php?redirection");

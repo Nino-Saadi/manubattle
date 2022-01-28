@@ -1,80 +1,23 @@
-<?php
+<?php include "default_front.php" ?>
+<body>
+  <header>
+    <nav class="nav-home">
+      <div class="nav-container">
+        <a href="auth.php">S'inscrire</a>
+        <a href="auth.php">Se connecter</a>
+      </div>
+    </nav>
+  </header>
 
-require 'config/config.php';
-require_once 'helpers/HttpRequest.php';
-// require_once 'controllers/userSubscribe.php';
+  <main>
+    <div class="main-container">
+      <h1>La Manu Ring</h1>
+      <p>Lancer vous dans une bataille ardente au sein de la terre du milieu, afin lutter contre les forces ténébreuses</p>
+    </div>
 
+    <div class="btn-container">
+      <button type="button" name="button-welcome"><a href="auth.php">Rejoindre la Bataille</a></button>
+    </div>
+  </main>
 
-// Création d'une nouvelle instance de Book
-
-// $page = $_GET['page'] ?? 'home';
-//
-// if ($page === 'home') {
-//     $controller = new App\Controllers\User();
-//     $controller->index();
-// } else {
-//     // book/show
-//     $page = explode('/', $page);
-//
-//     $controller_name = 'App\\Controllers\\' . $page[0];
-//     $method_name = $page[1];
-//
-//     $router = new $controller_name();
-//
-//     $router->$method_name();
-// }
-
-
-<?php
-
-/**
- * CE FICHIER EST LA PAGE D'ACCUEIL DU SITE.
- *
- * Le controller décidera de la page à afficher en fonction du paramètre dans le lien.
- */
-
-require_once "core.php";
-
-//On affiche la page en fonction de l'info en GET
-$route = frontController();
-
-switch ($route) {
-    case "welcome":
-        $title = "La Manu-Ring";
-        // $metaDesc = "Pyxelia est une plateforme de pixel-art en multijoueur inspiré par r/Place.";
-        render($route, compact('title', 'metaDesc'));
-        break;
-    case "game":
-        $title = "Pyxelia - Dessinez !";
-        $metaDesc = "Connectez-vous et créez une oeuvre d'art avec vos amis sur Pyxelia !";
-        $colors = $db->getColors();
-        render($route, compact('title', 'colors', 'metaDesc'));
-        break;
-    case "stats":
-        $title = "Pyxelia - Statistiques";
-        $metaDesc = "Toute les informations sur le tableau de Pyxelia !";
-        $colors = $db->getColors();
-        $users = $db->getUsers();
-        render($route, compact('title', 'colors', 'metaDesc', 'users'));
-        break;
-    case "legals":
-        $title = "Pyxelia - Mentions légales";
-        $metaDesc = "Voici nos mentions légales.";
-        render($route, compact('title', 'metaDesc'));
-        break;
-
-    case "403":
-        $title = "Pyxelia - 403";
-        $metaDesc = "Mince, il y a un problème, tu ne devrait pas être ici !";
-        $error_number = "403";
-        $error_message = "Eh oh ! T'essaie d'accéder à des trucs interdits là !";
-        render("error", compact('title', 'metaDesc', 'error_message', 'error_number'));
-
-    default:
-        $title = "Pyxelia - 404";
-        $metaDesc = "Mince, il y a un problème, tu ne devrait pas être ici !";
-        $error_number = "404";
-        $error_message = "La page n'a pas été trouvé...";
-        render("error", compact('title', 'metaDesc', 'error_message', 'error_number'));
-        break;
-}
+  <?php include "footer.php"  ?>
